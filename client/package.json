@@ -10,7 +10,9 @@
     "clean": "rm -rf dist/*",
 
     "prebuild": "npm run clean -s",
-    "build": "npm run sass:build -s",
+    "build": "npm run copy -s && npm run sass:build -s",
+
+    "copy": "cp src/*.html dist/",
 
     "sass:build": "node-sass src/scss/*.scss -o dist/"
   },
