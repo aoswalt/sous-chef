@@ -12,7 +12,7 @@
     "prebuild": "npm run clean -s",
     "build": "npm run copy -s && npm run sass:build -s",
 
-    "copy": "cp src/*.html dist/",
+    "copy": "find src/ -name '*.html' -exec bash -c 's={}; d=${s/src/dist}; mkdir -p $(dirname $d); cp $s $d;' \\;",
 
     "sass:build": "node-sass src/scss/*.scss -o dist/"
   },
