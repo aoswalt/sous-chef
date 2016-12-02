@@ -8,18 +8,33 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf dist/*",
-
-    "prebuild": "npm run clean -s",
-    "build": "npm run copy -s && npm run sass:build -s",
+    "clean:html": "rm -rf dist/**/*.html",
+    "clean:script": "rm -rf dist/**/*.js",
+    "clean:sass": "rm -rf dist/**/*.css",
 
     "copy": "find src/ -name '*.html' -exec bash -c 's={}; d=${s/src/dist}; mkdir -p $(dirname $d); cp $s $d;' \\;",
 
-    "sass:build": "node-sass src/scss/*.scss -o dist/",
+    "prebuild": "npm run clean -s",
+    "build": "npm run build:html -s && npm run build:script -s && npm run build:sass -s",
+    "prebuild:html": "npm run clean:html -s",
+    "build:html": "npm run copy -s",
+    "prebuild:script": "npm run clean:script -s",
+    "build:script": "babel --out-file dist/script.js src/**/*.jsx",
+    "prebuild:sass": "npm run clean:sass -s",
+    "build:sass": "node-sass src/scss/*.scss -o dist/",
 
-    "watch": "npm run build -s && browser-sync start --server 'dist' --files 'dist/*'"
+    "watch": "npm run watch:html -s & npm run watch:script -s & npm run watch:sass -s",
+    "watch:html": "nodemon -w src/**/*.html -e html -x 'npm run build:html -s'",
+    "watch:script": "nodemon -w src/**/*.jsx -e jsx -x 'npm run build:script -s'",
+    "watch:sass": "nodemon -w src/**/*.scss -e scss -x 'npm run build:sass -s'",
+
+    "dev": "npm run watch -s & browser-sync start --server 'dist' --files 'dist/'"
   },
   "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
     "browser-sync": "^2.18.2",
-    "node-sass": "^3.13.0"
+    "node-sass": "^3.13.0",
+    "nodemon": "^1.11.0"
   }
 }
