@@ -14,10 +14,12 @@
 
     "copy": "find src/ -name '*.html' -exec bash -c 's={}; d=${s/src/dist}; mkdir -p $(dirname $d); cp $s $d;' \\;",
 
-    "sass:build": "node-sass src/scss/*.scss -o dist/"
+    "sass:build": "node-sass src/scss/*.scss -o dist/",
+
+    "watch": "npm run build -s && browser-sync start --server 'dist' --files 'dist/*'"
   },
   "devDependencies": {
-    "live-reload": "^1.1.0",
+    "browser-sync": "^2.18.2",
     "node-sass": "^3.13.0"
   }
 }
