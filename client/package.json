@@ -24,17 +24,17 @@
     "build:sass": "node-sass src/scss/*.scss -o dist/",
 
     "watch": "npm run watch:html -s & npm run watch:script -s & npm run watch:sass -s",
-    "watch:html": "nodemon -w src/**/*.html -e html -x 'npm run build:html -s'",
-    "watch:script": "nodemon -w src/**/*.jsx -e jsx -x 'npm run build:script -s'",
-    "watch:sass": "nodemon -w src/**/*.scss -e scss -x 'npm run build:sass -s'",
+    "watch:html": "onchange 'src/**/*.html' -- npm run build:html -s",
+    "watch:script": "onchange 'src/**/*.jsx' -- npm run build:script -s",
+    "watch:sass": "onchange 'src/**/*.scss' -- npm run build:sass -s",
 
-    "dev": "npm run watch -s & browser-sync start --server 'dist' --files 'dist/'"
+    "dev": "npm run build -s && (npm run watch -s & browser-sync start --server 'dist' --files 'dist/')"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-react": "^6.16.0",
     "browser-sync": "^2.18.2",
     "node-sass": "^3.13.0",
-    "nodemon": "^1.11.0"
+    "onchange": "^3.2.0"
   }
 }
