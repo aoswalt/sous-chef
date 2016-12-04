@@ -19,7 +19,7 @@
     "prebuild:html": "npm run clean:html -s",
     "build:html": "npm run copy -s",
     "prebuild:script": "npm run clean:script -s",
-    "build:script": "browserify src/index.jsx -o dist/script.js -t [ babelify --presets [ react ] ]",
+    "build:script": "browserify src/app/index.jsx -o dist/script.js -t [ babelify --presets [ react ] ]",
     "prebuild:sass": "npm run clean:sass -s",
     "build:sass": "node-sass src/scss/*.scss -o dist/",
 
