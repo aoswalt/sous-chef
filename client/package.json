@@ -28,7 +28,7 @@
     "watch:script": "onchange 'src/**/*.jsx' -- npm run build:script -s",
     "watch:sass": "onchange 'src/**/*.scss' -- npm run build:sass -s",
 
-    "dev": "npm run build -s && (npm run watch -s & browser-sync start --server 'dist' --files 'dist/')"
+    "dev": "npm run build -s && (npm run watch -s & browser-sync start --server 'dist' --files 'dist/' --no-open)"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
