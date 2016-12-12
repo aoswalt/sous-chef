@@ -21,7 +21,7 @@
     "prebuild:script": "npm run clean:script -s",
     "build:script": "browserify src/app/index.jsx -o dist/script.js -t [ babelify --presets [ react ] ]",
     "prebuild:sass": "npm run clean:sass -s",
-    "build:sass": "node-sass src/scss/*.scss -o dist/",
+    "build:sass": "node-sass src/sass/*.scss -o dist/",
 
     "watch": "npm run watch:html -s & npm run watch:script -s & npm run watch:sass -s",
     "watch:html": "onchange 'src/**/*.html' -- npm run build:html -s",
