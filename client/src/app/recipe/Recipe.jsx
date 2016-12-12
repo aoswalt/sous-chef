@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Recipe = (props) =>
-  (<div>
+const Recipe = (props) => (
+  <div>
     <h1 className='recipe-title'>{props.title}</h1>
 
     <span className='servings'>{props.servings} Servings</span>
@@ -35,7 +35,8 @@ const Recipe = (props) =>
         </ul>
       </div>
     : ''}
-  </div>)
+  </div>
+)
 
 Recipe.propTypes = {
   title: React.PropTypes.string.isRequired,
