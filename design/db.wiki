@@ -1,0 +1,63 @@
+= Data Tables =
+
+== account ==
+active
+username
+name
+email
+
+== pass ==
+account_id
+pw_hash
+
+== recipe_box ==
+account_id
+label
+
+== recipe_box_recipes ==
+recipe_box_id
+recipe_id
+active
+
+== recipe ==
+data (jsonb)
+
+== account_recipes ==
+account_id
+recipe_id
+active
+
+== tag ==
+label
+
+== recipe_tags ==
+recipe_id
+tag_id
+active
+
+== ingredient_type ==
+type
+label
+description
+
+== measurement ==
+type_id
+label
+
+== measurement_conversion ==
+source_measurement_id
+target_measurement_id
+ratio
+
+
+== ingredient ? ==
+type_id
+active
+labe
+
+
+= Log Tables =
+
+== log_recipe ==
+== log_account ==
+== log_recipe_box ==
