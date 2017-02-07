@@ -1,0 +1,18 @@
+Owner
+
+Title
+Ingredient List
+  -Ingredient
+    -amount
+    -measurement
+    -item
+Step List
+  -Step details
+Servings
+Time
+  -Prep time
+  -Wait time
+  -Cook time
+  -Total time
+
+Tags
