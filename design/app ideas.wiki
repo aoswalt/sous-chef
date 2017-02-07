@@ -1,0 +1,12 @@
+simple to use
+unit conversions
+ability to scale recipe
+mobile responsive
+branch from someone else's recipe
+generate grocery list and can send to wunderlist, etc
+combine multiple recipes into single grocery list
+plaintext export
+markdown export
+printable formatted version
+theming
+Parsing from plaintext

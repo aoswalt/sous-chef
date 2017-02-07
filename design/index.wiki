@@ -1,4 +1,5 @@
 = Sous Chef =
 
+[[app ideas]]
 [[recipe]]
 [[db]]
