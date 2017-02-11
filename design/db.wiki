@@ -53,17 +53,20 @@ ratio
 == ingredient ? ==
 type_id
 active
-labe
+label
 
 
-= Audit Tables =
 
-== event_type ==
+= Log/Audit Tables =
+
+== action_type ==
+(create,modify,delete,?)
 
 == recipe ==
 == account ==
 == recipe_box ==
 
-
-
 == search ==
+user_id
+timestamp
+search_term
