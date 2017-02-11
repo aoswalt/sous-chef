@@ -10,3 +10,5 @@ markdown export
 printable formatted version
 theming
 Parsing from plaintext
+desktop app?
+mobile app?
