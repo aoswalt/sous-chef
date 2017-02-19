@@ -2,13 +2,17 @@
 
 == account ==
 active
+email
 username
 name
-email
 
 == pass ==
 account_id
-pw_hash
+hash
+
+== recipe ==
+account_id
+data (jsonb)
 
 == recipe_box ==
 account_id
@@ -16,14 +20,6 @@ label
 
 == recipe_box_recipes ==
 recipe_box_id
-recipe_id
-active
-
-== recipe ==
-data (jsonb)
-
-== account_recipes ==
-account_id
 recipe_id
 active
 
@@ -35,13 +31,7 @@ recipe_id
 tag_id
 active
 
-== ingredient_type ==
-type
-label
-description
-
 == measurement ==
-type_id
 label
 
 == measurement_conversion ==
