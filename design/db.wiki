@@ -32,11 +32,12 @@ tag_id
 active
 
 == measurement ==
+code
 label
 
 == measurement_conversion ==
-source_measurement_id
-target_measurement_id
+source_measurement_code
+target_measurement_code
 ratio
 
 
