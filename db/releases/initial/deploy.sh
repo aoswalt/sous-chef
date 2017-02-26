@@ -1,5 +1,5 @@
 cd ../../schemas
-cat ../../configuration/create_chef.sql
+cat ../configuration/create_chef.sql
 cat chef/tables/account.sql \
     chef/tables/pass.sql \
     chef/tables/recipe.sql \
